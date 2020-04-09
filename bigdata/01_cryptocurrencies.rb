@@ -8,6 +8,8 @@ cryptoValue = ["$6558.07", "$468.95", "$0.487526", "$762.84", "$8.86", "$85.26",
 
  my_hash = Hash[cryptoName.zip cryptoValue]
 
+# La ou les crypto qui ont la plus grosse valeur.
+
 def getHighestValue(my_hash)
   compar = 0.0
   tampon = Hash.new
@@ -20,6 +22,8 @@ def getHighestValue(my_hash)
 end
 
 puts "Les plus grande valeur est '#{getHighestValue(my_hash)}' "
+
+# La ou les crypto qui ont la plus petite valeur.
 
 def getMinValue(my_hash)
   compar = 0.0
@@ -34,6 +38,8 @@ end
 
 puts "la plus petite valeur est '#{getMinValue(my_hash)}' "
 
+# Le nombre de crypto contenant le mot "coin".
+
 def getCoinValue(my_hash)
   cpt = 0
   my_hash.each_key do |key|
@@ -45,6 +51,8 @@ def getCoinValue(my_hash)
 end
 
 puts "la plus petite valeur est '#{getCoinValue(my_hash)}' "
+
+# Les devises, dont le cours est inférieur à 6000 (Indice : on peut comparer en valeur 2 integers mais pas 2 strings. Pense bien à enlever le $ et éventuellement utiliser .to_i pour faire cet exercice).
 
 def getMax6000(my_hash)
   tampon = Hash.new
@@ -60,6 +68,8 @@ def getMax6000(my_hash)
 end
 
 puts "le hash de valeur sup a 6000 max est = '#{getMax6000(my_hash)}' "
+
+# La devise la plus chère parmi celles dont le cours est inférieur à 6000.
 
 def getMin6000(my_hash)
   tampon = Hash.new
